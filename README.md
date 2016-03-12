@@ -1,6 +1,13 @@
-# Ember-materialize-shim
+# Ember-materialize-shim [![Build Status](https://travis-ci.org/levanto-financial/ember-materialize-shim.svg?branch=master)](https://travis-ci.org/levanto-financial/ember-materialize-shim)
 
 A very simple shim to add [Materialize](https://github.com/Dogfalo/materialize) CSS and JavaScript resources to your ember.js app
+
+Import materialize styles
+
+**app/styles/app.scss**
+```scss
+@import "materialize"
+```
 
 ## Installation
 
