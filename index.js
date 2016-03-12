@@ -2,7 +2,7 @@
 'use strict';
 
 module.exports = {
-  name: 'ember-materialize-shim',
+  name: 'materialize',
   included: function(app) {
     this._super.included(app);
 
