@@ -1,6 +1,6 @@
 # Ember-materialize-shim
 
-This README outlines the details of collaborating on this Ember addon.
+A very simple shim to add [Materialize](https://github.com/Dogfalo/materialize) CSS and JavaScript resources to your ember.js app
 
 ## Installation
 
