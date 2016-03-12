@@ -14,7 +14,8 @@ module.exports = {
   // }
 
   afterInstall: function(options) {
-    return this.addAddonToProject('ember-material-design-icons-shim', '~0.0.1');
-    // Perform extra work here.
+    return this.addPackageToProject('ember-cli-sass', '^5.3.0').then(function() {
+      return this.addAddonToProject('ember-material-design-icons-shim', '~0.0.1');
+    }.bind(this));
   }
 };
