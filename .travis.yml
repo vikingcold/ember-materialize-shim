@@ -27,7 +27,7 @@ install:
   - npm install
   - bower install
 script:
-- ember try $EMBER_TRY_SCENARIO test
+- ember try $EMBER_TRY_SCENARIO test --skip-cleanup true
 notifications:
   slack:
     secure: QzGrURX+DwiBcQbdv8xKUYgErtyjF4U61jfrJ/x94TxEBzRLnBYBayyk6Hv+EnzBHtcf7e5iA3ydqY36q1n+0pU5i28vepyAsw+tpS2m2QSx3RXhSO4FXqVGr5zj1U5iOR6r8X4ImvRIBl6xTxeJBCb6rV3LwhNHt12MRd1J/7vi2MZCirMVGFM7nYose+60NtReoc0jv9aWtm669hhzjdKoQ7HPAoDhjjHqh/bbVoQ9hYBfu8ti0zvsas92zppZ306jnHYeUWGHdDkWpekwJxDHnvImJLA/qwaNo7cwmOX7saQVmih+axVIWWKU05PbxFcxnBj893u+sxlRTD9BayGdYiesor85h/xu+IMoX4YdrHE7xS8n7WgE3lzoEqCCcj/PFzh7Do2vIpL3iahzvodd8UsT2rmm886oejLtFTKn37+4g9AJcSrve/7gPwZhUXoeFSVJAG4PZQWJgrtGAoxGnxzyBLTVeX1KJzjtKzZHg92m20HpNEBXeDoKzg9IGqEVSzZ/VGq6SYjF0KW2KN88zkjHXzCuS+YcFasve4TuYpHBnVyVSnGv55EziYwfrl6VVuXk/hppafXMV7TN+UEh4pbKdZ9vgtDYiMYyXbWcL+PR4Qro6PYFQ4DRQfuXmBWNkFvIAGeaVUvakPkIu7OS8PUnXpRXGTfu5lJWTLk=
