@@ -1,6 +1,6 @@
 {
   "name": "ember-materialize-shim",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "A simple shim for using Materialize in Ember.js apps",
   "directories": {
     "doc": "doc",

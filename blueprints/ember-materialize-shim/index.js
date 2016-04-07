@@ -3,7 +3,7 @@ module.exports = {
   description: '',
   normalizeEntityName: function() {},
   beforeInstall: function(options) {
-    return this.addBowerPackageToProject('materialize', 'mike-north/materialize#bower-fix');
+    return this.addBowerPackageToProject('materialize', '0.97.6');
   },
 
   // locals: function(options) {
