@@ -21,6 +21,8 @@ module.exports = {
     app.import(app.bowerDirectory + '/materialize/dist/font/roboto/Roboto-Bold.woff2', { destDir: 'assets' });
     app.import(app.bowerDirectory + '/materialize/dist/font/roboto/Roboto-Bold.woff', { destDir: 'assets' });
     app.import(app.bowerDirectory + '/materialize/dist/font/roboto/Roboto-Bold.ttf', { destDir: 'assets' });
-    app.import(app.bowerDirectory + '/materialize/dist/js/materialize.js');
+    if (!process.env.EMBER_CLI_FASTBOOT) {
+      app.import(app.bowerDirectory + '/materialize/dist/js/materialize.js');
+    }
   }
 };
