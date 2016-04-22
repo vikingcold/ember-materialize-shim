@@ -1,5 +1,7 @@
 # Ember-materialize-shim [![Build Status](https://travis-ci.org/levanto-financial/ember-materialize-shim.svg?branch=master)](https://travis-ci.org/levanto-financial/ember-materialize-shim)
 
+**[FASTBOOT](http://ember-fastboot.com) COMPATIBLE**
+
 A very simple shim to add [Materialize](https://github.com/Dogfalo/materialize) SASS and JavaScript resources to your ember.js app
 
 Import materialize styles
