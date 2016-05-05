@@ -4,6 +4,8 @@
 
 A very simple shim to add [Materialize](https://github.com/Dogfalo/materialize) SASS and JavaScript resources to your ember.js app
 
+## Use
+
 Import materialize styles
 
 **app/styles/app.scss**
@@ -11,7 +13,14 @@ Import materialize styles
 @import "materialize"
 ```
 
-## Installation
+Import materialize javascript
+
+**my-file.js**
+```js
+import Materialize from 'materialize';
+```
+
+## Contributing
 
 * `git clone` this repository
 * `npm install`
