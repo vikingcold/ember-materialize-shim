@@ -22,7 +22,6 @@
     "ember-ajax": "2.4.1",
     "ember-cli": "2.6.2",
     "ember-cli-app-version": "^1.0.0",
-    "ember-cli-changelog": "0.3.4",
     "ember-cli-dependency-checker": "^1.2.0",
     "ember-cli-fastboot": "0.6.2",
     "ember-cli-htmlbars": "^1.0.3",
@@ -43,7 +42,17 @@
     "loader.js": "^4.0.1"
   },
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "material",
+    "materialdesign",
+    "materialize",
+    "ui",
+    "form",
+    "skin",
+    "paper",
+    "bootstrap",
+    "design",
+    "android"
   ],
   "dependencies": {
     "ember-cli-sass": "mike-north/ember-cli-sass#8ceb57d41f5774e8ececb5d1f05454449c19000c",
