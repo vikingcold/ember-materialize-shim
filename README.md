@@ -6,18 +6,34 @@ A very simple shim to add [Materialize](https://github.com/Dogfalo/materialize) 
 
 ## Use
 
-Import materialize styles
+Install this addon into your ember.js app, using ember-cli
+```sh
+ember install ember-materialize-shim
+```
+
+And then you can import materialize styles
 
 **app/styles/app.scss**
 ```scss
 @import "materialize"
 ```
 
-Import materialize javascript
+And import materialize javascript
 
 **my-file.js**
 ```js
 import Materialize from 'materialize';
+```
+
+Optionally, you may omit the JavaScript component of Materialize, by customizing your `ember-cli-build.js`
+
+```js
+var app = new EmberApp(defaults, {
+  ...
+  'materialize-shim': {
+    omitJS: true
+  }
+});
 ```
 
 ## Contributing
