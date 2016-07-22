@@ -28,7 +28,7 @@ import Materialize from 'materialize';
 Optionally, you may omit the JavaScript component of Materialize, by customizing your `ember-cli-build.js`
 
 ```js
-var app = new EmberAddon(defaults, {
+var app = new EmberApp(defaults, {
   ...
   'materialize-shim': {
     omitJS: true
