@@ -26,8 +26,13 @@ function fontPath(app, name) {
 
 module.exports = {
   name: 'ember-materialize-shim',
-  included: function(app) {
-    this._super.included(app);
+  included: function(appOrAddon) {
+    this._super.included(appOrAddon);
+    var app = appOrAddon;
+    if (typeof appOrAddon.import !== 'function' && appOrAddon.app) {
+      app = appOrAddon.app;
+    }
+    this.app = app;
 
     for (var i = 0; i < FONT_FILES.length; i++) {
       app.import(fontPath(app, FONT_FILES[i]), {

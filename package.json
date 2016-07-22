@@ -53,7 +53,6 @@
     "android"
   ],
   "dependencies": {
-    "ember-material-design-icons-shim": "~0.1.8",
     "ember-cli-sass": "5.3.1",
     "ember-cli-babel": "^5.1.6"
   },
