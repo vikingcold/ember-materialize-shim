@@ -1,28 +1,47 @@
 /* jshint node: true */
 'use strict';
 
+var FONT_FILES = [
+  'Roboto-Thin.woff2',
+  'Roboto-Thin.woff',
+  'Roboto-Thin.ttf',
+  'Roboto-Light.woff2',
+  'Roboto-Light.woff',
+  'Roboto-Light.ttf',
+  'Roboto-Regular.woff2',
+  'Roboto-Regular.woff',
+  'Roboto-Regular.ttf',
+  'Roboto-Medium.woff2',
+  'Roboto-Medium.woff',
+  'Roboto-Medium.ttf',
+  'Roboto-Bold.woff2',
+  'Roboto-Bold.woff',
+  'Roboto-Bold.ttf'
+];
+
+
+function fontPath(app, name) {
+  return app.bowerDirectory + '/materialize/dist/font/roboto/' + name;
+}
+
 module.exports = {
-  name: 'materialize',
+  name: 'ember-materialize-shim',
   included: function(app) {
     this._super.included(app);
 
-    app.import(app.bowerDirectory + '/materialize/dist/font/roboto/Roboto-Thin.woff2', { destDir: 'assets' });
-    app.import(app.bowerDirectory + '/materialize/dist/font/roboto/Roboto-Thin.woff', { destDir: 'assets' });
-    app.import(app.bowerDirectory + '/materialize/dist/font/roboto/Roboto-Thin.ttf', { destDir: 'assets' });
-    app.import(app.bowerDirectory + '/materialize/dist/font/roboto/Roboto-Light.woff2', { destDir: 'assets' });
-    app.import(app.bowerDirectory + '/materialize/dist/font/roboto/Roboto-Light.woff', { destDir: 'assets' });
-    app.import(app.bowerDirectory + '/materialize/dist/font/roboto/Roboto-Light.ttf', { destDir: 'assets' });
-    app.import(app.bowerDirectory + '/materialize/dist/font/roboto/Roboto-Regular.woff2', { destDir: 'assets' });
-    app.import(app.bowerDirectory + '/materialize/dist/font/roboto/Roboto-Regular.woff', { destDir: 'assets' });
-    app.import(app.bowerDirectory + '/materialize/dist/font/roboto/Roboto-Regular.ttf', { destDir: 'assets' });
-    app.import(app.bowerDirectory + '/materialize/dist/font/roboto/Roboto-Medium.woff2', { destDir: 'assets' });
-    app.import(app.bowerDirectory + '/materialize/dist/font/roboto/Roboto-Medium.woff', { destDir: 'assets' });
-    app.import(app.bowerDirectory + '/materialize/dist/font/roboto/Roboto-Medium.ttf', { destDir: 'assets' });
-    app.import(app.bowerDirectory + '/materialize/dist/font/roboto/Roboto-Bold.woff2', { destDir: 'assets' });
-    app.import(app.bowerDirectory + '/materialize/dist/font/roboto/Roboto-Bold.woff', { destDir: 'assets' });
-    app.import(app.bowerDirectory + '/materialize/dist/font/roboto/Roboto-Bold.ttf', { destDir: 'assets' });
-    if (!process.env.EMBER_CLI_FASTBOOT) {
+    for (var i = 0; i < FONT_FILES.length; i++) {
+      app.import(fontPath(app, FONT_FILES[i]), {
+        destDir: 'assets'
+      });
+    }
+
+    if (!process.env.EMBER_CLI_FASTBOOT && !(app.options['materialize-shim'] || {}).omitJS) {
       app.import(app.bowerDirectory + '/materialize/dist/js/materialize.js');
+      app.import('vendor/materialize-shim.js', {
+        exports: {
+          materialize: ['default']
+        }
+      });
     }
   }
 };
