@@ -6,9 +6,13 @@ A very simple shim to add [Materialize](https://github.com/Dogfalo/materialize) 
 
 ## Use
 
-Install this addon into your ember.js app, using ember-cli
+Install this addon into your ember.js app, using ember-cli.
+
+Reinstall node-sass to ensure that you have an older version, which is required to circumvent an [outstanding issue](https://github.com/aexmachina/ember-cli-sass/issues/117).
+
 ```sh
 ember install ember-materialize-shim
+npm uninstall node-sass && npm install
 ```
 
 And then you can import materialize styles
